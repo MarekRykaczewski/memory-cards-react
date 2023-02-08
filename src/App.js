@@ -11,7 +11,7 @@ function App() {
   React.useEffect(() => {
     setCards(shuffle(allNewCards()))
 }, [])
-
+    
   function allNewCards() {
       const newCards = []
       for (let i = 0; i < 12; i++) {
@@ -70,7 +70,7 @@ function incrementScore() {
   return (
     <div className="App">
         {cardElements}
-        <div> {score} </div>
+        <div> Score: {score} </div>
         <div> Top score: {topScore}</div>
     </div>
   );
