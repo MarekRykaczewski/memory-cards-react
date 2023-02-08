@@ -11,7 +11,14 @@ function App() {
   React.useEffect(() => {
     setCards(shuffle(allNewCards()))
 }, [])
+  
+  React.useEffect(() => {
+    if (topScore < score) {
+      setTopScore(score)
+    }
+  }, [score, topScore])
     
+
   function allNewCards() {
       const newCards = []
       for (let i = 0; i < 12; i++) {
