@@ -5,6 +5,7 @@ import Card from './components/Card';
 function App() {
 
   const [cards, setCards] = React.useState([])
+  const [score, setScore] = React.useState(0)
 
   React.useEffect(() => {
     setCards(shuffle(allNewCards()))
