@@ -29,11 +29,14 @@ console.log(cards)
 
   function updateCard(id) {
     const cardToUpdate = cards.filter(card => card.id === id)
-    if (!(cardToUpdate.clicked)) {
+    if (!(cardToUpdate[0].clicked)) {
       cardToUpdate[0].clicked = true
       setCards(prevCards => [...prevCards])
       incrementScore()
-    } 
+    } else {
+      setCards(shuffle(allNewCards()))
+      setScore(0)
+    }
 
   }
 
