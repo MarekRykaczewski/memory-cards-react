@@ -6,6 +6,7 @@ function App() {
 
   const [cards, setCards] = React.useState([])
   const [score, setScore] = React.useState(0)
+  const [topScore, setTopScore] = React.useState(0)
 
   React.useEffect(() => {
     setCards(shuffle(allNewCards()))
