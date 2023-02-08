@@ -56,6 +56,11 @@ function shuffle(array) {
 function setCardsUsingShuffle() {
   setCards(prevCards => shuffle(prevCards))
 }
+
+function incrementScore() {
+  setScore(prevScore => prevScore + 1)
+}
+
   return (
     <div className="App">
         {cardElements}
