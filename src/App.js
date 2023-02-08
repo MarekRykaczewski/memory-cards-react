@@ -4,7 +4,11 @@ import Card from './components/Card';
 
 function App() {
 
-  const [cards, setCards] = React.useState(shuffle(allNewCards()))
+  const [cards, setCards] = React.useState([])
+
+  React.useEffect(() => {
+    setCards(shuffle(allNewCards()))
+}, [])
     
   function allNewCards() {
       const newCards = []
@@ -16,7 +20,7 @@ function App() {
   
   const cardElements = cards.map(function(card, index) {
     return(
-        <Card key={index} value={card.id} clicked={card.clicked} handleClick={() => updateCard(card.id)}/>
+        <Card key={index} value={card.id} clicked={card.clicked} handleClick={() => {updateCard(card.id);setCardsUsingShuffle()}}/>
     )
 })
 
@@ -26,7 +30,7 @@ console.log(cards)
     const cardToUpdate = cards.filter(card => card.id === id)
     console.log(cardToUpdate)
     cardToUpdate[0].clicked = true
-    setCards(prevCards => prevCards, cardToUpdate)
+    setCards(prevCards => [...prevCards])
     console.log(cards)
   }
 
@@ -46,6 +50,10 @@ function shuffle(array) {
   }
 
   return array;
+}
+
+function setCardsUsingShuffle() {
+  setCards(prevCards => shuffle(prevCards))
 }
   return (
     <div className="App">
