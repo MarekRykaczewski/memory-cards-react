@@ -59,6 +59,7 @@ function setCardsUsingShuffle() {
   return (
     <div className="App">
         {cardElements}
+        <div> {score} </div>
     </div>
   );
 }
