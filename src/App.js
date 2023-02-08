@@ -29,10 +29,12 @@ console.log(cards)
 
   function updateCard(id) {
     const cardToUpdate = cards.filter(card => card.id === id)
-    console.log(cardToUpdate)
-    cardToUpdate[0].clicked = true
-    setCards(prevCards => [...prevCards])
-    console.log(cards)
+    if (!(cardToUpdate.clicked)) {
+      cardToUpdate[0].clicked = true
+      setCards(prevCards => [...prevCards])
+      incrementScore()
+    } 
+
   }
 
 function shuffle(array) {
