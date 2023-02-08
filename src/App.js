@@ -9,16 +9,18 @@ function App() {
   function allNewCards() {
       const newCards = []
       for (let i = 0; i < 12; i++) {
-          newCards.push(i)
+          newCards.push({id: i, clicked: false})
       }
       return newCards
   }
   
   const cardElements = cards.map(function(card, index) {
     return(
-        <Card key={index} value={cards[card]}/>
+        <Card key={index} value={card.id}/>
     )
 })
+
+console.log(cards)
 
 function shuffle(array) {
   let currentIndex = array.length,  randomIndex;
