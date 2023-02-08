@@ -16,11 +16,19 @@ function App() {
   
   const cardElements = cards.map(function(card, index) {
     return(
-        <Card key={index} value={card.id} clicked={card.clicked}/>
+        <Card key={index} value={card.id} clicked={card.clicked} handleClick={() => updateCard(card.id)}/>
     )
 })
 
 console.log(cards)
+
+  function updateCard(id) {
+    const cardToUpdate = cards.filter(card => card.id === id)
+    console.log(cardToUpdate)
+    cardToUpdate[0].clicked = true
+    setCards(prevCards => prevCards, cardToUpdate)
+    console.log(cards)
+  }
 
 function shuffle(array) {
   let currentIndex = array.length,  randomIndex;
