@@ -16,7 +16,7 @@ function App() {
   
   const cardElements = cards.map(function(card, index) {
     return(
-        <Card key={index} value={card.id}/>
+        <Card key={index} value={card.id} clicked={card.clicked}/>
     )
 })
 
