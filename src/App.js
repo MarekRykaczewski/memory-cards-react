@@ -41,9 +41,7 @@ function shuffle(array) {
 }
   return (
     <div className="App">
-      <header className="App-header">
         {cardElements}
-      </header>
     </div>
   );
 }
