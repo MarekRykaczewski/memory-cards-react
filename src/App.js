@@ -76,9 +76,16 @@ function incrementScore() {
 
   return (
     <div className="App">
-        {cardElements}
-        <div> Score: {score} </div>
-        <div> Top score: {topScore}</div>
+
+        <div className="score">
+          <div className="score--text"> Score: {score} </div>
+          <div className="score--text"> Top score: {topScore}</div>
+        </div>
+
+        <div className="cards"> 
+          {cardElements} 
+        </div>
+        
     </div>
   );
 }

@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    background-color: cadetblue;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+}
+
+.score--text {
+    font-weight: bold;
+    font-size: 25px;
+}
