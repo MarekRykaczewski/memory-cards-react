@@ -1,9 +1,18 @@
 import React from "react"
+import '../App.css';
 
 export default function Card(props) {
+
+    const styles = {
+        // height: "100%",
+        // width: "100%",
+        // backgroundSize: "cover"
+
+    }
+
     return (
         <div className="card">
-            <h2 className="card-val" onClick={props.handleClick}>{props.value}</h2>
+            <img className="card--image" src={props.imgUrl} alt="character" onClick={props.handleClick}></img>
         </div>
     )
 }

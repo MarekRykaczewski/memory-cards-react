@@ -2,11 +2,39 @@ import './App.css';
 import React from 'react';
 import Card from './components/Card';
 
+import Chewbacca from "./imgs/chewbacca.webp"
+import Ewok from "./imgs/ewok.png"
+import Han from "./imgs/han.jpg"
+import Leia from "./imgs/leia.webp"
+import Luke from "./imgs/luke.jpg"
+import Maul from "./imgs/maul.webp"
+import Obi from "./imgs/obi.webp"
+import Quigon from "./imgs/qui-gon.png"
+import Sidious from "./imgs/sidious.jpg"
+import Vader from "./imgs/vader.jpg"
+import Windu from "./imgs/windu.jpeg"
+import Yoda from "./imgs/yoda.webp"
+
+
 function App() {
 
   const [cards, setCards] = React.useState([])
   const [score, setScore] = React.useState(0)
   const [topScore, setTopScore] = React.useState(0)
+  const IMAGES = ([
+    Chewbacca,
+    Ewok,
+    Han,
+    Leia,
+    Luke,
+    Maul,
+    Obi,
+    Quigon,
+    Sidious,
+    Vader,
+    Windu,
+    Yoda
+  ])
 
   React.useEffect(() => {
     setCards(shuffle(allNewCards()))
@@ -29,7 +57,7 @@ function App() {
   
   const cardElements = cards.map(function(card, index) {
     return(
-        <Card key={index} value={card.id} clicked={card.clicked} handleClick={() => {updateCard(card.id);setCardsUsingShuffle()}}/>
+        <Card key={index} value={card.id} clicked={card.clicked} imgUrl={IMAGES[card.id]} handleClick={() => {updateCard(card.id);setCardsUsingShuffle()}}/>
     )
 })
 

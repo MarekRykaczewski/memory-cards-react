@@ -28,6 +28,12 @@ body {
     background-color: cadetblue;
 }
 
+.card--image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
 .score {
     display: flex;
     flex-direction: column;
