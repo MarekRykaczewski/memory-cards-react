@@ -105,6 +105,8 @@ function incrementScore() {
   return (
     <div className="App">
 
+        <div className='title'> Star Wars Memory Game </div>
+
         <div className="score">
           <div className="score--text"> Score: {score} </div>
           <div className="score--text"> Top score: {topScore}</div>
