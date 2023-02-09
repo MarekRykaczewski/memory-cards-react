@@ -116,6 +116,8 @@ function incrementScore() {
           {cardElements} 
         </div>
         
+        <footer> <span> Marek Rykaczewski </span> </footer>
+
     </div>
   );
 }
